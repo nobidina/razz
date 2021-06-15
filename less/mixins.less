@@ -1,0 +1,66 @@
+.container() {
+  padding: 35px 20px;
+
+  @media @tablet {
+    padding: 45px 5%;
+  }
+
+  @media @desktop {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.container-wide() {
+  padding: 35px 20px;
+
+  @media @tablet {
+    padding: 45px 5%;
+  }
+
+  @media @desktop {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 80px 65px 80px;
+  }
+}
+
+.inner-container() {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media @tablet {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  @media @desktop {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+}
+
+.inner-container-narrow() {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media @tablet {
+    box-sizing: border-box;
+    max-width: 1280px;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  @media @desktop {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+}
