@@ -18,6 +18,7 @@
 
     @media @tablet {
       margin-bottom: 0;
+      margin-right: 15px;
     }
 
     &:first-child {
@@ -46,10 +47,15 @@
 
     &:last-child {
       margin-bottom: 0;
+
+      @media @tablet {
+        margin-right: 0;
+      }
     }
   }
 
   &__logo {
+    cursor: pointer;
     display: block;
     margin-bottom: 5px;
     z-index: 1;
@@ -77,9 +83,16 @@
   }
 
   &__list-item {
+    flex-shrink: 0;
+    
     @media @tablet {
+      margin-right: 25px;
+    }
+
+    @media @desktop {
       margin-right: 45px;
     }
+
 
     &:last-child {
       @media @tablet {

@@ -1,0 +1,124 @@
+.challenge {
+  .container();
+
+  &__inner {
+    overflow: hidden;
+    .inner-container();
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px 25px;
+    border-radius: 24px;
+    background: @challenge-bg url(../../img/berry.svg) no-repeat right 100px;
+    background-size: auto 35%;
+
+    @media @tablet {
+      padding-top: 65px;
+      padding-bottom: 65px;
+      border-radius: 38px;
+      background-position: right 50px;
+      background-size: auto 85%;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      z-index: 0;
+      border-radius: 50%;
+      background: radial-gradient(50% 50% at 47.13% 36.66%, #331552 0%, rgba(21, 10, 36, 0) 100%);
+      opacity: 0.5;
+      filter: blur(120px);
+    }
+
+    &::before {
+      top: 30px;
+      left: 10px;
+
+      @media @tablet {
+        top: 0;
+        right: 0;
+        width: 1232px;
+        height: 1232px;
+      }
+    }
+
+    &::after {
+      left: -238px;
+      top: -169px;
+      width: 888px;
+      height: 888px;
+    }
+  }
+
+  &__sticker {
+    z-index: 1;
+    align-self: flex-start;
+    margin-bottom: 45px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 115%;
+    font-weight: 500;
+    color: @title-light-color;
+    background: radial-gradient(100% 1115.56% at 100% 50%, #FB7565 0%, #FFBF60 100%);
+
+    @media @tablet {
+      margin-bottom: 55px;
+      font-size: 23px;
+    }
+  }
+
+  &__title {
+    z-index: 1;
+    margin-bottom: 25px;
+
+    @media @tablet {
+      max-width: 55%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    z-index: 1;
+    @media @tablet {
+      max-width: 55%;
+      margin-bottom: 55px;
+    }
+  }
+
+  &__img-wrapper {
+    z-index: 1;
+    line-height: 0;
+    margin-right: -25px;
+    margin-bottom: 10px;
+
+    @media @tablet {
+      position: absolute;
+      bottom: 300px;
+      right: 0;
+      max-width: 624px;
+      width: 45%;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 45px;
+
+    @media @tablet {
+      width: 185px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__scheema {
+    z-index: 1;
+  }
+}
