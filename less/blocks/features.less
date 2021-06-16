@@ -8,32 +8,40 @@
   }
 
   &:before {
-    z-index: 0;
-    .circle();
-    bottom: 5%;
-    right: -15%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(231, 84, 97, 0.33) 0%, rgba(251, 247, 253, 0) 100%);
-    opacity: 0.3;
+    @media @tablet {
+      z-index: 0;
+      .circle();
+      bottom: 5%;
+      right: -15%;
+      background: url(../../img/gradients/features-3.svg) no-repeat center;
+      background-size: contain;
+    }
   }
 
   &__circles {
     display: flex;
     width: 100%;
     &:before {
-      z-index: 0;
-      .circle();
-      top: 5%;
-      left: -15%;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(253, 207, 94, 0.22) 0%, rgba(251, 248, 254, 0) 100%);
-      opacity: 0.9;
+      @media @tablet {
+        z-index: 0;
+        .circle();
+        top: 5%;
+        left: -10%;
+        background: url(../../img/gradients/features-1.svg) no-repeat center;
+        background-size: cover;
+        opacity: 0.9;
+      }
     }
   
     &:after {
-      z-index: 0;
-      .circle();
-      bottom: 0;
-      left: -18%;
-      background: radial-gradient(50% 50% at 47.13% 36.66%, rgba(51, 21, 82, 0.1) 0%, rgba(21, 10, 36, 0) 100%);
+      @media @tablet {
+        z-index: 0;
+        .circle();
+        bottom: 0;
+        left: -18%;
+        background: url(../../img/gradients/features-2.svg) no-repeat center;
+        background-size: contain;         
+      }
     }
   }
 
@@ -57,7 +65,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 65px;
+    margin-bottom: 85px;
 
     @media @tablet {
       flex-direction: row;

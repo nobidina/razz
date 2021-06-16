@@ -28,34 +28,39 @@
 
     &::before,
     &::after {
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      z-index: 0;
-      border-radius: 50%;
-      background: radial-gradient(50% 50% at 47.13% 36.66%, #331552 0%, rgba(21, 10, 36, 0) 100%);
-      opacity: 0.5;
-      filter: blur(120px);
+      @media @tablet {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        z-index: 0;
+        border-radius: 50%;
+      }
     }
 
     &::before {
-      top: 30px;
-      left: 10px;
-
       @media @tablet {
-        top: 0;
-        right: 0;
+        top: 10%;
+        left: 0;
         width: 1232px;
         height: 1232px;
+        border-radius: 50%;
+        opacity: 0.3;
+        background: url(../../img/gradients/challenge-2.svg) no-repeat center;
+        background-size: cover;
       }
     }
 
     &::after {
-      left: -238px;
-      top: -169px;
-      width: 888px;
-      height: 888px;
+      @media @tablet {
+        right: -25%;
+        top: -10%;
+        width: 888px;
+        height: 888px;
+        border-radius: 50%;
+        background: url(../../img/gradients/challenge-1.svg) no-repeat center;
+        background-size: cover;
+      }
     }
   }
 
@@ -97,7 +102,10 @@
 
   &__img-wrapper {
     z-index: 1;
+    align-self: flex-end;
     line-height: 0;
+    width: 310px;
+    height: 215px;
     margin-right: -25px;
     margin-bottom: 10px;
 
@@ -107,6 +115,7 @@
       right: 0;
       max-width: 624px;
       width: 45%;
+      height: 425px;
       margin-right: 0;
       margin-bottom: 0;
     }

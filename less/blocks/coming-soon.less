@@ -6,12 +6,14 @@
   background-size: auto 95%;
 
   &::before {
-    z-index: 0;
-    .circle();
-    bottom: -20%;
-    right: 5%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(231, 84, 97, 0.33) 0%, rgba(249, 244, 255, 0) 100%);
-    opacity: 0.5;
+    @media @tablet {
+      z-index: 0;
+      .circle();
+      bottom: -20%;
+      right: 5%;
+      background: url(../../img/gradients/coming-soon.svg) no-repeat center;
+      background-size: cover;
+    }
   }
 
   &__inner {

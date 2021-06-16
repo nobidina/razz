@@ -1,14 +1,31 @@
 .page-footer {
   overflow: hidden;
   .container();
+  position: relative;
   overflow: hidden;
   padding-top: 45px;
   padding-bottom: 45px;
-  background-color: @footer-bg;
+  background: @footer-bg linear-gradient(135deg, rgba(51,21,82,1) 11%, rgba(21,10,36,1) 77%);
 
   @media @tablet {
     max-width: 100%;
     padding: 60px 80px 65px 80px;
+    background: @footer-bg;
+  }
+
+  &::before {
+    @media @tablet {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: -5%;
+      width: 1093px;
+      height: 204px;
+      background-size: contain;
+      background: url(../../img/gradients/footer.svg) no-repeat center;
+      background-size: cover;
+    }
   }
 
   &__inner {
@@ -25,7 +42,6 @@
   }
 
   &__column {
-    position: relative;
     margin-bottom: 25px;
 
     @media @tablet {
@@ -36,25 +52,6 @@
     &:first-child {
       display: flex;
       flex-direction: column;
-    }
-
-    &:first-child:before {
-      content: "";
-      position: absolute;
-      top: -100px;
-      left: -100px;
-      z-index: 0;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(50% 50% at 47.13% 36.66%, #331552 0%, rgba(21, 10, 36, 0) 100%);
-      filter: blur(120px);
-  
-      @media @tablet {
-        top: -250px;
-        left: -450px;
-        width: 1093px;
-        height: 1093px;
-      }
     }
 
     &:last-child {
@@ -88,6 +85,7 @@
 
   &__list {
     @media @tablet {
+      z-index: 1;
       display: flex;
       justify-content: space-between;
       align-items: center;
