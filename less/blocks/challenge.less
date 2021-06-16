@@ -26,35 +26,14 @@
       background-size: auto 85%;
     }
 
-    &::before,
     &::after {
       @media @tablet {
         content: "";
         position: absolute;
-        width: 600px;
-        height: 600px;
+        right: -15%;
+        top: -10%;
         z-index: 0;
         border-radius: 50%;
-      }
-    }
-
-    &::before {
-      @media @tablet {
-        top: 10%;
-        left: 0;
-        width: 1232px;
-        height: 1232px;
-        border-radius: 50%;
-        opacity: 0.3;
-        background: url(../../img/gradients/challenge-2.svg) no-repeat center;
-        background-size: cover;
-      }
-    }
-
-    &::after {
-      @media @tablet {
-        right: -25%;
-        top: -10%;
         width: 888px;
         height: 888px;
         border-radius: 50%;
