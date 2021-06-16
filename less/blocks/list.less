@@ -2,6 +2,24 @@
   &__item {
 		margin-bottom: 10px;
 		padding-left: 38px;
-		background: url(../../img/tick.svg) no-repeat left center;
-	}
+    background: url(../../img/tick-blue.svg) no-repeat left 5px;
+
+    @media @desktop {
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &--orange-ticks {
+    & .list__item {
+      background: url(../../img/tick.svg) no-repeat left center;
+
+      @media @desktop {
+        margin-bottom: 10px;
+      }
+    } 
+  }
 }

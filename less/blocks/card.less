@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  color: @title-dark-color;
+
+  &__img {
+    width: 85px;
+    margin-bottom: 25px;
+
+    @media @tablet {
+      width: 120px;
+      margin-bottom: 75px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 142%;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 142%;
+  }
+}

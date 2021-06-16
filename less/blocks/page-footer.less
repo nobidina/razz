@@ -1,12 +1,24 @@
 .page-footer {
-  .container-wide();
   overflow: hidden;
+  .container();
+  overflow: hidden;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-color: @footer-bg;
 
+  @media @tablet {
+    max-width: 100%;
+    padding: 60px 80px 65px 80px;
+  }
+
   &__inner {
-    .inner-container-narrow();
+    .inner-container();
 
     @media @tablet {
+      box-sizing: border-box;
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
       display: flex;
       justify-content: space-between;
     }

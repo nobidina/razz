@@ -1,5 +1,10 @@
 .challenge {
   .container();
+  margin-bottom: 115px;
+
+  @media @tablet {
+    margin-bottom: 160px;
+  }
 
   &__inner {
     overflow: hidden;
@@ -67,7 +72,7 @@
     background: radial-gradient(100% 1115.56% at 100% 50%, #FB7565 0%, #FFBF60 100%);
 
     @media @tablet {
-      margin-bottom: 55px;
+      margin-bottom: 60px;
       font-size: 23px;
     }
   }
@@ -78,7 +83,7 @@
 
     @media @tablet {
       max-width: 55%;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
   }
 
@@ -104,6 +109,10 @@
       width: 45%;
       margin-right: 0;
       margin-bottom: 0;
+    }
+
+    @media @desktop {
+      width: 624px;
     }
   }
 

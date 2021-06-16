@@ -2,9 +2,16 @@
   @media @tablet {
     background: url(../../img/intro-bg@1x.png) no-repeat top right;
     background-size: 42% auto;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url(../../img/intro-bg@2x.png) no-repeat top right;
+      background-size: 42% auto;
+    }
   }
   
   &__inner {
+    padding-top: 45px;
+    padding-bottom: 115px;
     overflow: hidden;
     position: relative;
     .container();
@@ -44,7 +51,7 @@
   }
 
   &__header {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     @media @tablet {
       margin-bottom: 0;
@@ -72,7 +79,6 @@
       max-width: 540px;
       width: 51%;
       padding-top: 100px;
-      padding-bottom: 100px;
     }
   }
 
@@ -97,7 +103,7 @@
   }
 
   &__button {
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 
     @media @tablet {
       margin-bottom: 0;
@@ -121,7 +127,7 @@
       top: -15px;
       margin-left: 190px;
       width: 540px;
-      height: 700px;
+      height: 685px;
     }
   }
 
